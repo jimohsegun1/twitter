@@ -26,7 +26,7 @@ const PORT = process.env.PORT || 5000;
 //     res.send("Server is ready")
 // })
 
-app.use(express.json()); // to parse req.body
+app.use(express.json({limit:"6mb"})); // to parse req.body
 app.use(express.urlencoded({ extended: true })); // to parse req.body
 app.use(cookieParser());
 
